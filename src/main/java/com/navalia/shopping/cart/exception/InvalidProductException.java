@@ -1,10 +1,7 @@
-package com.navalia.shoppingcart.exception;
+package com.navalia.shopping.cart.exception;
 
-public class InvalidOrderException extends Exception {
-
-    private static final long serialVersionUID = 1530121797171485043L;
-
-    public InvalidOrderException(String message) {
+public class InvalidProductException extends Exception {
+    public InvalidProductException(String message) {
         super(message);
     }
 }

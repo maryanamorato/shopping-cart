@@ -1,18 +1,16 @@
-package com.navalia.shoppingcart.entity;
-
-import lombok.Getter;
-import lombok.Setter;
+package com.navalia.shopping.cart.domains.entity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Getter
-@Setter
 public class Cart {
+    private List<Product> products = new ArrayList<>();
 
-    private List<Item> items;
+    public List<Product> getProducts() {
+        return products;
+    }
 
-    public Cart() {
-       this.items = new ArrayList<>();
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 }

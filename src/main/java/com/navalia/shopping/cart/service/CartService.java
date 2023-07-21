@@ -1,19 +1,16 @@
-package com.navalia.shoppingcart.service;
+package com.navalia.shopping.cart.service;
 
-import com.navalia.shoppingcart.dto.request.OrderRequest;
-import com.navalia.shoppingcart.dto.response.ClosedOrderResponse;
-import com.navalia.shoppingcart.dto.response.OrderResponse;
-import com.navalia.shoppingcart.exception.InvalidOrderException;
-import com.navalia.shoppingcart.exception.ItemNotInCartException;
+import com.navalia.shopping.cart.domains.dto.CheckoutResponse;
+import com.navalia.shopping.cart.domains.dto.ProductRequest;
+import com.navalia.shopping.cart.domains.entity.Cart;
+import com.navalia.shopping.cart.exception.InvalidAmountException;
+import com.navalia.shopping.cart.exception.InvalidProductException;
 
 public interface CartService {
 
-    OrderResponse addToCart(OrderRequest order) throws InvalidOrderException;
-
-    OrderResponse removeFromCart(OrderRequest order) throws InvalidOrderException, ItemNotInCartException;
-
-    OrderResponse emptyCart();
-
-    ClosedOrderResponse closeOrder();
+    Cart addProduct(ProductRequest productRequest) throws InvalidProductException, InvalidAmountException;
+    Cart removeProduct(ProductRequest productRequest) throws InvalidProductException, InvalidAmountException;
+    Cart clearCart();
+    CheckoutResponse checkout();
 
 }

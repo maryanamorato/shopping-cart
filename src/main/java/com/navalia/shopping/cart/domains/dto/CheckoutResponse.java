@@ -1,11 +1,13 @@
-package com.navalia.shopping.cart.domains.entity;
+package com.navalia.shopping.cart.domains.dto;
 
-import com.navalia.shopping.cart.domains.Item;
-import lombok.Data;
+import com.navalia.shopping.cart.domains.entity.Cart;
 
-import java.util.List;
+public record CheckoutResponse(Cart cart, Double totalPrice) {
+    public static CheckoutResponse from(final Cart cart, final Double totalPrice) {
+        return new CheckoutResponse(cart, totalPrice);
+    }
 
-@Data
-public class Cart {
-    private List<Item> items;
+    public Double getTotalPrice() {
+        return totalPrice;
+    }
 }
