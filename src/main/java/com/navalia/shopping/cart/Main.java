@@ -1,4 +1,4 @@
-package com.navalia.shoppingcart;
+package com.navalia.shopping.cart;
 
 import io.micronaut.runtime.Micronaut;
 

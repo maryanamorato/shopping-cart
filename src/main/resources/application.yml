@@ -1,0 +1,13 @@
+micronaut:
+  application:
+    name: shopping-cart
+  server:
+    context-path: /api/shopping-cart/v1
+
+endpoints:
+  health:
+    enabled: true
+    sensitive: false
+  info:
+    enabled: true
+    sensitive: false
