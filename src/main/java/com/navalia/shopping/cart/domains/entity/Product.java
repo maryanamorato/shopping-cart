@@ -1,5 +1,8 @@
 package com.navalia.shopping.cart.domains.entity;
 
+import io.micronaut.serde.annotation.Serdeable;
+
+@Serdeable.Serializable
 public class Product {
     private Integer id;
     private String name;

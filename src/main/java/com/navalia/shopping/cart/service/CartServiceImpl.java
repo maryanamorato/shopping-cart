@@ -7,6 +7,7 @@ import com.navalia.shopping.cart.domains.entity.Cart;
 import com.navalia.shopping.cart.domains.entity.Product;
 import com.navalia.shopping.cart.exception.InvalidAmountException;
 import com.navalia.shopping.cart.exception.InvalidProductException;
+import jakarta.inject.Singleton;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,6 +21,7 @@ import static com.navalia.shopping.cart.constants.OperationEnum.ADD;
 import static com.navalia.shopping.cart.constants.OperationEnum.REMOVE;
 import static com.navalia.shopping.cart.service.ProductsServiceImpl.getCatalog;
 
+@Singleton
 public class CartServiceImpl implements CartService {
     private final Cart cart = new Cart();
 
