@@ -1,4 +1,4 @@
-package com.navalia.shopping.cart.util;
+package com.navalia.shopping.cart.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.navalia.shopping.cart.domains.entity.Product;
@@ -6,8 +6,8 @@ import com.navalia.shopping.cart.domains.entity.Product;
 import java.io.File;
 import java.io.IOException;
 
-public class JsonUtil {
-    public static Product[] getProducts() {
+public class ProductsServiceImpl {
+    public static Product[] getCatalog() {
         ObjectMapper objectMapper = new ObjectMapper();
         Product[] products;
 
